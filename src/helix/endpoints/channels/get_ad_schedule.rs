@@ -77,7 +77,7 @@ pub struct AdSchedule {
     /// The number of snoozes available for the broadcaster.
     pub snooze_count: i32,
     /// The UTC timestamp when the broadcaster will gain an additional snooze, in RFC3339 format.
-    pub snooze_refresh_at: types::Timestamp,
+    pub snooze_refresh_at: i32,
     /// The UTC timestamp of the broadcaster’s next scheduled ad, in RFC3339 format. Empty if the channel has no ad scheduled or is not live.
     #[serde(
         default,
