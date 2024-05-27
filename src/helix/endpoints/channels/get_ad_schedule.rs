@@ -83,11 +83,11 @@ pub struct AdSchedule {
         default,
         deserialize_with = "helix::deserialize_none_from_empty_or_zero_string"
     )]
-    pub next_ad_at: Option<types::Timestamp>,
+    pub next_ad_at: Option<i32>,
     /// The length in seconds of the scheduled upcoming ad break.
     pub duration: i32, /* TODO: Is this a types::CommercialLength? is it 0 if no ad is scheduled? */
     /// The UTC timestamp of the broadcaster’s last ad-break, in RFC3339 format. Empty if the channel has not run an ad or is not live.
-    pub last_ad_at: types::Timestamp,
+    pub last_ad_at: i32,
     /// The amount of pre-roll free time remaining for the channel in seconds. Returns 0 if they are currently not pre-roll free.
     #[serde(
         default,
